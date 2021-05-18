@@ -16,7 +16,7 @@ v14.16.1
 7.9.0
 ```
 
-`npm ci` 使いたいので、`yarn` ではなく `npm` でお願いします  
+※ `npm ci` 使いたいので、`yarn` ではなく `npm` でお願いします  
 <br />
 
 ### create-react-app つかってます
@@ -26,13 +26,6 @@ $ npx create-react-app react-ts-demo --template typescript
 ```
 
 <br />
-
-### ルール ★
-
-1. github flow 運用です (main ブランチへの反映はひとまずなし)
-2. develop へのマージは複数人レビュー実施後に行いましょう
-3. ブランチ作成は、feature/xxx で作成しましょう  
-   <br />
 
 ## > インストール
 
@@ -67,5 +60,32 @@ $ cd react-ts-demo
 $ npm run storybook
 ```
 
-コマンドを実施すると、`http://localhost:6000/` が立ち上がります  
+コマンドを実施すると、`http://localhost:6006/` が立ち上がります  
 <br />
+
+## > 拡張
+
+### モジュール追加
+
+```
+npm i <module_name> --save-dev
+```
+
+### devDependencies → dependencies 移動
+
+```
+npm i <module_name> -p
+```
+
+### dependencies → devDependencies 移動
+
+```
+npm i <module_name> -D
+```
+
+## > ルール ★
+
+1. github flow 運用です (main ブランチへの反映はひとまずなし)
+2. develop へのマージは複数人レビュー実施後に行いましょう
+3. ブランチ作成は、feature/xxx で作成しましょう
+4. style はひとまず CSS Modules で
