@@ -34,12 +34,27 @@
     "test:coverage": "react-app-rewired test --coverage --watchAll=false",
     "eject": "react-app-rewired eject",
     "tsm": "tsm src",
-    "tsm:watch": "tsm src --watch"
+    "tsm:watch": "tsm src --watch",
+    "storybook": "run-p storybook:*",
+    "storybook:deamon": "start-storybook -p 6006",
+    "storybook:tsm": "npm run tsm:watch",
+    "build-storybook": "run-s tsm build-storybook:internal",
+    "build-storybook:internal": "build-storybook"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -55,6 +70,14 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^6.2.9",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-jest": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/node-logger": "^6.2.9",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.2.9",
     "cspell": "^5.4.1",
     "customize-cra": "^1.0.0",
     "npm-run-all": "^4.1.5",

@@ -1,4 +1,4 @@
-import 'styles/base.module.scss';
+import 'styles/base.scss';
 
 import { Hoge, Foo } from '@/components/module/Hoge';
 

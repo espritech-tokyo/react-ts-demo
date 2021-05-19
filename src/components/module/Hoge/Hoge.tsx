@@ -13,10 +13,10 @@ export type Props = {
 
 export const Hoge: React.FC<Props> = ({ list }) => (
   <>
-    {list.map((foo, index) => (
-      <dl key={index} className={style.foo}>
-        <dt className={style.title}>{foo.title}</dt>
-        <dd className={style.detail}>{foo.detail}</dd>
+    {list.map(foo => (
+      <dl key={foo.title} className={style.foo} data-testid="hoge">
+        <dt className={style.title} data-testid="hogeTitle">{foo.title}</dt>
+        <dd className={style.detail} data-testid="hogeDetail">{foo.detail}</dd>
       </dl>
     ))}
   </>
