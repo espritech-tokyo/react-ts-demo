@@ -20,7 +20,7 @@ Default.args = {
 };
 
 export const Multi = Template.bind({});
-Default.args = {
+Multi.args = {
   list: [
     {
       title: 'title_1',
